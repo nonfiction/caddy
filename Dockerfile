@@ -1,8 +1,9 @@
 FROM caddy:2.4.3-builder-alpine AS builder
 
 RUN xcaddy build \
-    --with github.com/hairyhenderson/caddy-teapot-module@v0.0.3-0 \
-    --with github.com/mastercactapus/caddy2-proxyprotocol@v0.0.2
+    --with github.com/mastercactapus/caddy2-proxyprotocol@v0.0.2 \
+    --with github.com/Darkweak/Souin/plugins/caddy@v1.5.2 \
+    --with github.com/hairyhenderson/caddy-teapot-module@v0.0.3-0
 
 FROM caddy:2.4.3-alpine
 
